@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#FAF7F2</color>
+    <color name="buttoms">#24442C</color>
+    <color name="acsent">#3F7845</color>
+    <color name="panels">#EFECE6</color>
+    <color name="chat_bg">#FAF7F2</color>
+    <color name="bubble_bot_bg">#EFECE6</color>
+    <color name="bubble_user_bg">#224229</color>
+    <color name="accent_green">#224229</color>
+    <color name="status_green">#4A7C59</color>
+    <color name="text_abc">#1E241F</color>
+    <color name="text">#6E756F</color>
+    <color name="border_muted">#D8D3C8</color>
+    <color name="light_text">#A3A3A3</color>
+    <color name="orange">#eb944d</color>
+    <color name="light_orange">#FCE8DD</color>
+    <color name="light_green">#EFF4EC</color>
+
+
+</resources>

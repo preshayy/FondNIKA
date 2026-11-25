@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="24dp"
+        android:padding="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Создать аккаунт"
+        android:textColor="#1C241E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+    <!-- Подзаголовок под тематику фонда -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Поможем найти друга или оформить опеку"
+        android:textColor="#5C6B61"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <!-- Поле ввода имени -->
+    <EditText
+        android:id="@+id/etLogin"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_log_input"
+        android:hint="Введите имя"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="16dp"
+        android:textColor="#1C241E"
+        android:textColorHint="#7A827C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle" />
+
+    <!-- Поле ввода email -->
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_log_input"
+        android:hint="Введите email"
+        android:inputType="textEmailAddress"
+        android:paddingHorizontal="16dp"
+        android:textColor="#1C241E"
+        android:textColorHint="#7A827C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etLogin" />
+
+    <!-- Поле ввода пароля -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_log_input"
+        android:hint="Введите пароль"
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp"
+        android:textColor="#1C241E"
+        android:textColorHint="#7A827C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+
+    <!-- Кнопка регистрации -->
+    <Button
+        android:id="@+id/btRegistration"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/buttoms"
+        android:text="Зарегистрироваться"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:cornerRadius="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPassword" />
+
+    <!-- Ссылка на вход -->
+    <TextView
+        android:id="@+id/tvLoginLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Уже есть аккаунт? Войти"
+        android:textColor="#5C6B61"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btRegistration" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
