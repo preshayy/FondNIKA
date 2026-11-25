@@ -30,37 +30,33 @@ public class MainActivity extends AppCompatActivity {
         ivLogo = findViewById(R.id.ivLogo);
         Picasso.get().load("https://nika-design.pages.dev/pomoch/assets/logo-nika.png");
 
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.chat); // подключаем ваш файл chat.xml
-
-        // Укажите реальные ID из вашего chat.xml
-        RecyclerView rvMessages = findViewById(R.id.rvMessages);
-        EditText etMessage = findViewById(R.id.etMessage);
-        ImageButton btnSend = findViewById(R.id.btnSend);
+//        // Укажите реальные ID из вашего chat.xml
+//        RecyclerView rvMessages = findViewById(R.id.rvMessages);
+//        EditText etMessage = findViewById(R.id.etMessage);
+//        ImageButton btnSend = findViewById(R.id.btnSend);
 
         // 1. Наполняем чат стартовыми сообщениями, чтобы сразу можно было листать
-        List<Message> messageList = new ArrayList<>();
-        messageList.add(new Message("Здравствуйте! Я помощник фонда НИКА.", false));
-        messageList.add(new Message("Подскажите, как взять собаку из приюта?", true));
-        messageList.add(new Message("Вы можете выбрать питомца в каталоге или задать мне любой вопрос!", false));
+//        List<Message> messageList = new ArrayList<>();
+//        messageList.add(new Message("Здравствуйте! Я помощник фонда НИКА.", false));
+//        messageList.add(new Message("Подскажите, как взять собаку из приюта?", true));
+//        messageList.add(new Message("Вы можете выбрать питомца в каталоге или задать мне любой вопрос!", false));
 
         // 2. Настраиваем список
-        ChatAdapter adapter = new ChatAdapter(messageList);
-        rvMessages.setLayoutManager(new LinearLayoutManager(this));
-        rvMessages.setAdapter(adapter);
+//        ChatAdapter adapter = new ChatAdapter(messageList);
+//        rvMessages.setLayoutManager(new LinearLayoutManager(this));
+//        rvMessages.setAdapter(adapter);
 
-        // 3. Обрабатываем отправку нового сообщения
-        btnSend.setOnClickListener(v -> {
-            String text = etMessage.getText().toString().trim();
-            if (!text.isEmpty()) {
-                adapter.addMessage(new Message(text, true));
-                etMessage.setText(""); // очищаем поле ввода
-
-                // Плавно прокручиваем вниз к новому сообщению
-                rvMessages.smoothScrollToPosition(messageList.size() - 1);
-            }
-        });
+//        // 3. Обрабатываем отправку нового сообщения
+//        btnSend.setOnClickListener(v -> {
+//            String text = etMessage.getText().toString().trim();
+//            if (!text.isEmpty()) {
+//                adapter.addMessage(new Message(text, true));
+//                etMessage.setText(""); // очищаем поле ввода
+//
+//                // Плавно прокручиваем вниз к новому сообщению
+//                rvMessages.smoothScrollToPosition(messageList.size() - 1);
+//            }
+//        });
     }
 }
 
