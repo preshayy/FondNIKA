@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Fond NIKA</string>
+    <string name="btn_find_cat">Ищу кошку</string>
+    <string name="btn_find_dog">Ищу собаку</string>
+    <string name="become_an_owener">Стать опекуном</string>
+    <string name="ask">Спросите о чём угодно...</string>
+    <string name="send">Отправить</string>
+    <string name="open_panel">Открыть панель</string>
+    <string name="bot_name">Помощник фонда НИКА</string>
 </resources>

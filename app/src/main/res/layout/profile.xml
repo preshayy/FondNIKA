@@ -48,15 +48,23 @@
             android:src="@drawable/ic_person"
             app:tint="#4A5D4E" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:text="Ника"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
         <!-- Email пользователя -->
         <TextView
             android:id="@+id/tvUserEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="12dp"
             android:text="volunteer@nika-fond.ru"
-            android:textColor="#556B5D"
+            android:textColor="@color/light_text"
             android:textSize="16sp" />
 
         <!-- Заголовок секции с питомцами -->
