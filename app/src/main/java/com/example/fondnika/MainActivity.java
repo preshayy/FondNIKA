@@ -1,6 +1,7 @@
 package com.example.fondnika;
 
 import android.content.Intent;
+import android.content.SharedPreferences; // <-- Добавьте этот импорт
 import android.os.Bundle;
 import android.util.Patterns;
 import android.widget.Button;
@@ -48,6 +49,14 @@ public class MainActivity extends AppCompatActivity {
                 etPassword.requestFocus();
                 return;
             }
+
+            // === ВСТАВЬТЕ ЭТОТ БЛОК СЮДА ===
+            SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+            prefs.edit()
+                    .putString("USER_NAME", name)
+                    .putString("USER_EMAIL", email)
+                    .apply();
+            // ===============================
 
             Intent intent = new Intent(MainActivity.this, ChatWork.class);
             intent.putExtra("USER_NAME", name);
