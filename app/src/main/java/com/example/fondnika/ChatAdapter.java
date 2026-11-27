@@ -8,7 +8,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MessageViewHolder> {
@@ -44,11 +43,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MessageViewHol
         holder.tvText.setText(message.getText());
 
         if (message.isUser()) {
-            // Ваше сообщение — справа (с персиковым фоном)
+            // Ваше сообщение — справа
             holder.container.setGravity(Gravity.END);
             holder.tvText.setBackgroundResource(R.drawable.bg_chat_input);
         } else {
-            // Сообщение помощника — слева (светло-зелёный фон)
+            // Сообщение помощника — слева
             holder.container.setGravity(Gravity.START);
             holder.tvText.setBackgroundResource(R.drawable.bg_bubble_bot);
         }
@@ -64,3 +63,5 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MessageViewHol
         notifyItemInserted(messages.size() - 1);
     }
 }
+
+

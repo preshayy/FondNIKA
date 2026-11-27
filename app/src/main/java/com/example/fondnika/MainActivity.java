@@ -2,12 +2,11 @@ package com.example.fondnika;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.fondnika.ChatWork;
 import com.squareup.picasso.Picasso;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,21 +16,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Загружаем логотип сразу при открытии экрана регистрации
         ImageView ivLogo = findViewById(R.id.ivLogo);
+        EditText etLogin = findViewById(R.id.etLogin);
+        EditText etEmail = findViewById(R.id.email);
+        EditText etPassword = findViewById(R.id.etPassword);
+        Button btRegistration = findViewById(R.id.btRegistration);
+
         Picasso.get()
-                .load("https://nika-design.pages.dev/pomoch/assets/logo-nika.png")
+                .load("https://pages.dev")
+                .placeholder(R.mipmap.ic_launcher)
+                .error(R.mipmap.ic_launcher)
                 .into(ivLogo);
 
-        // Переход в чат по нажатию на кнопку
-        Button btRegistration = findViewById(R.id.btRegistration);
         btRegistration.setOnClickListener(v -> {
+            String name = etLogin.getText().toString().trim();
+            String email = etEmail.getText().toString().trim();
+            String password = etPassword.getText().toString().trim();
+
+            if (name.isEmpty()) {
+                etLogin.setError("Введите имя");
+                etLogin.requestFocus();
+                return;
+            }
+            if (email.isEmpty() || !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                etEmail.setError("Введите корректный email");
+                etEmail.requestFocus();
+                return;
+            }
+            if (password.length() < 6) {
+                etPassword.setError("Пароль должен быть не менее 6 символов");
+                etPassword.requestFocus();
+                return;
+            }
+
             Intent intent = new Intent(MainActivity.this, ChatWork.class);
+            intent.putExtra("USER_NAME", name);
             startActivity(intent);
         });
     }
 }
-
-
-
-
